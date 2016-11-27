@@ -1,0 +1,83 @@
+html, body
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	min-width: 1024px;
+	min-height: 576px;
+	max-width: 3840px;
+	max-height: 2160px;
+}
+
+#container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#bluediv
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 10;
+}
+
+#orangediv
+{
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 20;
+	top: 0;
+	left: 0;
+}
+
+.splitimage
+{
+	position: relative;
+	min-height: 100%;
+	min-width: 100%;
+}
+@media (min-aspect-ratio: 16/9)
+{
+	.splitimage
+	{
+		width: 100%;
+		height: auto;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+@media (max-aspect-ratio: 16/9)
+{
+	.splitimage
+	{
+		width: auto;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+#textdiv
+{
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
